@@ -45,6 +45,7 @@ const workerConfig: WorkerConfig = {
       expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
       timeout: 10000,
+      interval: 60, // Interval in seconds
       // [OPTIONAL] headers to be sent
       headers: {
         'User-Agent': 'Uptimeflare',
