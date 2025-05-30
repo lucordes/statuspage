@@ -13,7 +13,7 @@ const pageConfig: PageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    '🌐 Public (example group name)': ['foo_monitor', 'bar_monitor', 'more monitor ids...'],
+    '🌐 Public (example group name)': ['foo_monitor', 'bar_monitor', 'notes'],
     '🔐 Private': ['test_tcp_monitor'],
   },
 }
@@ -78,8 +78,16 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://overleaf.lucacordes.com',
       // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
       hideLatencyChart: false,
-      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
-      expectedCodes: [200],
+    },
+    {
+      id: 'notes',
+      // `name` is used at status page and callback message
+      name: 'My Notes',
+      // `method` should be a valid HTTP Method
+      method: 'POST',
+      // `target` is a valid URL
+      target: 'https://notes.lucacordes.com',
+
     },
   ],
   notification: {
