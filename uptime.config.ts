@@ -128,7 +128,7 @@ const workerConfig: WorkerConfig = {
       id: 'vps',
       name: 'VPS',
       method: 'GET',
-      target: '217.154.194.135',
+      target: 'https://nginxstrato.lucacordes.com/',
       tooltip: 'My VPS!',
       hideLatencyChart: false,
       checkProxy: 'worker://weur'
