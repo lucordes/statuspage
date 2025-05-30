@@ -13,8 +13,8 @@ const pageConfig: PageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    '🌐 Public': ['launchpage', 'overleaf', 'notes','analytics','git','photos','webdav'],
-    //'🔐 Private': ['test_tcp_monitor'],
+    '🌐 Public': ['launchpage', 'overleaf', 'notes','git'],
+    '🔐 Private': ['vscode','vps','vaultwarden','photos','analytics','webdav','budget'],
   },
 }
 
@@ -94,7 +94,6 @@ const workerConfig: WorkerConfig = {
       tooltip: 'It is like github!',
       statusPageLink: 'https://git.lucacordes.com',
       hideLatencyChart: false,
-      expectedCodes: [405],
       checkProxy: 'worker://weur'
     },
     {
@@ -113,6 +112,42 @@ const workerConfig: WorkerConfig = {
       method: 'GET',
       target: 'https://photos.lucacordes.com',
       tooltip: 'Photos!',
+      hideLatencyChart: false,
+      checkProxy: 'worker://weur'
+    },
+    {
+      id: 'vscode',
+      name: 'VS code server',
+      method: 'GET',
+      target: 'https://vscode.lucacordes.com/login',
+      tooltip: 'It is a decent editor!',
+      hideLatencyChart: false,
+      checkProxy: 'worker://weur'
+    },
+    {
+      id: 'vps',
+      name: 'VPS',
+      method: 'GET',
+      target: '217.154.194.135',
+      tooltip: 'My VPS!',
+      hideLatencyChart: false,
+      checkProxy: 'worker://weur'
+    },
+    {
+      id: 'vaultwarden',
+      name: 'Vaultwarden',
+      method: 'GET',
+      target: 'https://vaultwarden.lucacordes.com',
+      tooltip: 'My secure passwords!',
+      hideLatencyChart: false,
+      checkProxy: 'worker://weur'
+    },
+    {
+      id: 'budget',
+      name: 'Actual Budget',
+      method: 'GET',
+      target: 'https://budget.lucacordes.com/',
+      tooltip: 'My Money!',
       hideLatencyChart: false,
       checkProxy: 'worker://weur'
     },
