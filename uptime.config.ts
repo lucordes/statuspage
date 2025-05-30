@@ -59,7 +59,7 @@ const workerConfig: WorkerConfig = {
       id: 'overleaf',
       name: 'Overleaf',
       method: 'POST',
-      target: 'https://overleaf.lucacordes.com',
+      target: 'https://overleaf.lucacordes.com/login',
       tooltip: 'Writing all the documents!',
       statusPageLink: 'https://overleaf.lucacordes.com',
       hideLatencyChart: false,
