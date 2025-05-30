@@ -66,15 +66,20 @@ const workerConfig: WorkerConfig = {
     // Example TCP Monitor
     {
       id: 'test_tcp_monitor',
-      name: 'Overleaf',
-      // `method` should be `TCP_PING` for tcp monitors
-      // method: 'TCP_PING',
+      // `name` is used at status page and callback message
+      name: 'My Overleaf',
+      // `method` should be a valid HTTP Method
       method: 'POST',
-      // `target` should be `host:port` for tcp monitors
+      // `target` is a valid URL
       target: 'https://overleaf.lucacordes.com',
-      tooltip: 'My Overleaf CE Server',
+      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
+      tooltip: 'Overleaf CE running for free!',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://overleaf.lucacordes.com',
-      timeout: 5000,
+      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
+      hideLatencyChart: false,
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      expectedCodes: [200],
     },
   ],
   notification: {
