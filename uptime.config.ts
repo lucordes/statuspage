@@ -34,8 +34,8 @@ const workerConfig: WorkerConfig = {
       target: 'https://www.lucacordes.com',
       tooltip: 'The root page of a domain is called Lauchpange!',
       statusPageLink: 'https://www.lucacordes.com',
-      hideLatencyChart: true,
-      checkProxy: 'worker://weur'
+      hideLatencyChart: false,
+      checkProxy: 'worker://eu'
       // [OPTIONAL] headers to be sent
       // headers: {
       //   'User-Agent': 'Uptimeflare',
@@ -63,7 +63,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'Writing all the documents!',
       statusPageLink: 'https://overleaf.lucacordes.com',
       hideLatencyChart: false,
-      checkProxy: 'worker://weur'
+      checkProxy: 'worker://eu'
     },
     {
       id: 'notes',
@@ -72,8 +72,8 @@ const workerConfig: WorkerConfig = {
       target: 'https://notes.lucacordes.com',
       tooltip: 'Public part of my diary!',
       statusPageLink: 'https://notes.lucacordes.com',
-      hideLatencyChart: true,
-      checkProxy: 'worker://weur'
+      hideLatencyChart: false,
+      checkProxy: 'worker://eu'
 
     },
   ],
