@@ -13,8 +13,8 @@ const pageConfig: PageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    '🌐 Public': ['launchpage', 'overleaf', 'notes','analytics','git'],
-    '🔐 Private': ['test_tcp_monitor'],
+    '🌐 Public': ['launchpage', 'overleaf', 'notes','analytics','git','photos','webdav'],
+    //'🔐 Private': ['test_tcp_monitor'],
   },
 }
 
@@ -94,6 +94,25 @@ const workerConfig: WorkerConfig = {
       target: 'https://git.lucacordes.com',
       tooltip: 'It is like github!',
       statusPageLink: 'https://git.lucacordes.com',
+      hideLatencyChart: false,
+      checkProxy: 'worker://weur'
+    },
+    {
+      id: 'webdav',
+      name: 'webdav',
+      method: 'POST',
+      target: 'https://webdav.lucacordes.com',
+      tooltip: 'Cloud!',
+      hideLatencyChart: false,
+      expectedCodes: [401],
+      checkProxy: 'worker://weur'
+    },
+    {
+      id: 'photos',
+      name: 'Photos',
+      method: 'GET',
+      target: 'https://photos.lucacordes.com',
+      tooltip: 'Photos!',
       hideLatencyChart: false,
       checkProxy: 'worker://weur'
     },
