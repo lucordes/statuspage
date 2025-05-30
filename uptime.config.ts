@@ -88,7 +88,7 @@ const workerConfig: WorkerConfig = {
     {
       id: 'git',
       name: 'Gitea',
-      method: 'POST',
+      method: 'GET',
       target: 'https://git.lucacordes.com',
       tooltip: 'It is like github!',
       statusPageLink: 'https://git.lucacordes.com',
