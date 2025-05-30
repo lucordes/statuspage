@@ -58,12 +58,11 @@ const workerConfig: WorkerConfig = {
     {
       id: 'overleaf',
       name: 'Overleaf',
-      method: 'POST',
+      method: 'GET',
       target: 'https://overleaf.lucacordes.com/login',
       tooltip: 'Writing all the documents!',
       statusPageLink: 'https://overleaf.lucacordes.com',
       hideLatencyChart: false,
-      expectedCodes: [403],
       checkProxy: 'worker://weur'
     },
     {
@@ -84,7 +83,6 @@ const workerConfig: WorkerConfig = {
       tooltip: 'Count your goats!',
       statusPageLink: 'https://analytics.lucacordes.com',
       hideLatencyChart: false,
-      expectedCodes: [405],
       checkProxy: 'worker://weur'
     },
     {
