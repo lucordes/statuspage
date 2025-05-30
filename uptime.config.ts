@@ -84,6 +84,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'Count your goats!',
       statusPageLink: 'https://analytics.lucacordes.com',
       hideLatencyChart: false,
+      expectedCodes: [405],
       checkProxy: 'worker://weur'
     },
     {
