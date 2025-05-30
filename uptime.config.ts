@@ -13,7 +13,7 @@ const pageConfig: PageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    '🌐 Public (example group name)': ['launchpage', 'overleaf', 'notes'],
+    '🌐 Public': ['launchpage', 'overleaf', 'notes'],
     '🔐 Private': ['test_tcp_monitor'],
   },
 }
@@ -35,7 +35,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'The root page of a domain is called Lauchpange!',
       statusPageLink: 'https://www.lucacordes.com',
       hideLatencyChart: false,
-      checkProxy: 'worker://eu'
+      checkProxy: 'worker://weur'
       // [OPTIONAL] headers to be sent
       // headers: {
       //   'User-Agent': 'Uptimeflare',
@@ -63,7 +63,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'Writing all the documents!',
       statusPageLink: 'https://overleaf.lucacordes.com',
       hideLatencyChart: false,
-      checkProxy: 'worker://eu'
+      checkProxy: 'worker://weur'
     },
     {
       id: 'notes',
@@ -73,8 +73,17 @@ const workerConfig: WorkerConfig = {
       tooltip: 'Public part of my diary!',
       statusPageLink: 'https://notes.lucacordes.com',
       hideLatencyChart: false,
-      checkProxy: 'worker://eu'
-
+      checkProxy: 'worker://weur'
+    },
+    {
+      id: 'analytics',
+      name: 'Analytics',
+      method: 'POST',
+      target: 'https://notes.lucacordes.com',
+      tooltip: 'Count your goats!',
+      statusPageLink: 'https://analytics.lucacordes.com',
+      hideLatencyChart: false,
+      checkProxy: 'worker://weur'
     },
   ],
   notification: {
