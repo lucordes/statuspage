@@ -13,7 +13,7 @@ const pageConfig: PageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    '🌐 Public (example group name)': ['foo_monitor', 'bar_monitor', 'notes'],
+    '🌐 Public (example group name)': ['launchpage', 'overleaf', 'notes'],
     '🔐 Private': ['test_tcp_monitor'],
   },
 }
@@ -27,24 +27,15 @@ const workerConfig: WorkerConfig = {
   monitors: [
     // Example HTTP Monitor
     {
-      // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
-      // `name` is used at status page and callback message
+      
+      id: 'launchpage',
       name: 'My Lauchpage',
-      // `method` should be a valid HTTP Method
       method: 'POST',
-      // `target` is a valid URL
       target: 'https://www.lucacordes.com',
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
       tooltip: 'The root page of a domain is called Lauchpange!',
-      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://www.lucacordes.com',
-      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
-      hideLatencyChart: false,
-      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
-      expectedCodes: [200],
-      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
-      timeout: 10000,
+      hideLatencyChart: true,
+      checkProxy: 'worker://weur'
       // [OPTIONAL] headers to be sent
       // headers: {
       //   'User-Agent': 'Uptimeflare',
@@ -65,28 +56,24 @@ const workerConfig: WorkerConfig = {
     },
     // Example TCP Monitor
     {
-      id: 'test_tcp_monitor',
-      // `name` is used at status page and callback message
-      name: 'My Overleaf',
-      // `method` should be a valid HTTP Method
+      id: 'overleaf',
+      name: 'Overleaf',
       method: 'POST',
-      // `target` is a valid URL
       target: 'https://overleaf.lucacordes.com',
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'Overleaf CE running for free!',
-      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      tooltip: 'Writing all the documents!',
       statusPageLink: 'https://overleaf.lucacordes.com',
-      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
       hideLatencyChart: false,
+      checkProxy: 'worker://weur'
     },
     {
       id: 'notes',
-      // `name` is used at status page and callback message
       name: 'My Notes',
-      // `method` should be a valid HTTP Method
       method: 'POST',
-      // `target` is a valid URL
       target: 'https://notes.lucacordes.com',
+      tooltip: 'Public part of my diary!',
+      statusPageLink: 'https://notes.lucacordes.com',
+      hideLatencyChart: true,
+      checkProxy: 'worker://weur'
 
     },
   ],
