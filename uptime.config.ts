@@ -13,7 +13,7 @@ const pageConfig: PageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    '🌐 Public': ['launchpage', 'overleaf', 'notes'],
+    '🌐 Public': ['launchpage', 'overleaf', 'notes','analytics','git'],
     '🔐 Private': ['test_tcp_monitor'],
   },
 }
@@ -82,6 +82,16 @@ const workerConfig: WorkerConfig = {
       target: 'https://notes.lucacordes.com',
       tooltip: 'Count your goats!',
       statusPageLink: 'https://analytics.lucacordes.com',
+      hideLatencyChart: false,
+      checkProxy: 'worker://weur'
+    },
+    {
+      id: 'git',
+      name: 'Gitea',
+      method: 'POST',
+      target: 'https://notes.lucacordes.com',
+      tooltip: 'It is like github!',
+      statusPageLink: 'https://git.lucacordes.com',
       hideLatencyChart: false,
       checkProxy: 'worker://weur'
     },
