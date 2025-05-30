@@ -5,9 +5,9 @@ const pageConfig: PageConfig = {
   title: "Luca's Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
-    { link: 'https://blog.lyc8503.net/', label: 'Blog' },
-    { link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
+    { link: 'https://github.com/lucordes', label: 'GitHub' },
+    { link: 'https://notes.lucacordes.com/', label: 'Blog' },
+    { link: 'mailto:lucacordes@lucacordes.com', label: 'Email Me', highlight: true },
   ],
   // [OPTIONAL] Group your monitors
   // If not specified, all monitors will be shown in a single list
@@ -30,13 +30,13 @@ const workerConfig: WorkerConfig = {
       // `id` should be unique, history will be kept if the `id` remains constant
       id: 'foo_monitor',
       // `name` is used at status page and callback message
-      name: 'My API Monitor',
+      name: 'My Lauchpage',
       // `method` should be a valid HTTP Method
       method: 'POST',
       // `target` is a valid URL
       target: 'https://www.lucacordes.com',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
+      tooltip: 'The root page of a domain is called Lauchpange!',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://www.lucacordes.com',
       // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
@@ -46,10 +46,10 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
       timeout: 10000,
       // [OPTIONAL] headers to be sent
-      headers: {
-        'User-Agent': 'Uptimeflare',
-        Authorization: 'Bearer YOUR_TOKEN_HERE',
-      },
+      // headers: {
+      //   'User-Agent': 'Uptimeflare',
+      //   Authorization: 'Bearer YOUR_TOKEN_HERE',
+      // },
       // // [OPTIONAL] body to be sent
       // body: 'Hello, world!',
       // // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
@@ -66,13 +66,14 @@ const workerConfig: WorkerConfig = {
     // Example TCP Monitor
     {
       id: 'test_tcp_monitor',
-      name: 'Example TCP Monitor',
+      name: 'Overleaf',
       // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
+      // method: 'TCP_PING',
+      method: 'POST',
       // `target` should be `host:port` for tcp monitors
-      target: '1.2.3.4:22',
-      tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
+      target: 'https://overleaf.lucacordes.com',
+      tooltip: 'My Overleaf CE Server',
+      statusPageLink: 'https://overleaf.lucacordes.com',
       timeout: 5000,
     },
   ],
