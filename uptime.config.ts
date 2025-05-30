@@ -63,6 +63,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'Writing all the documents!',
       statusPageLink: 'https://overleaf.lucacordes.com',
       hideLatencyChart: false,
+      expectedCodes: [403],
       checkProxy: 'worker://weur'
     },
     {
