@@ -155,18 +155,18 @@ const workerConfig: WorkerConfig = {
   notification: {
     // [Optional] apprise API server URL
     // if not specified, no notification will be sent
-    appriseApiServer: 'https://apprise.example.com/notify',
+    //appriseApiServer: 'https://apprise.example.com/notify',
     // [Optional] recipient URL for apprise, refer to https://github.com/caronc/apprise
     // if not specified, no notification will be sent
-    recipientUrl: 'tgram://bottoken/ChatID',
+    //recipientUrl: 'tgram://bottoken/ChatID',
     // [Optional] timezone used in notification messages, default to "Etc/GMT"
-    timeZone: 'Europe/Amsterdam',
+    //timeZone: 'Europe/Amsterdam',
     // [Optional] grace period in minutes before sending a notification
     // notification will be sent only if the monitor is down for N continuous checks after the initial failure
     // if not specified, notification will be sent immediately
-    gracePeriod: 5,
+    //gracePeriod: 5,
     // [Optional] disable notification for monitors with specified ids
-    skipNotificationIds: ['foo_monitor', 'bar_monitor'],
+    //skipNotificationIds: ['foo_monitor', 'bar_monitor'],
   },
   callbacks: {
     onStatusChange: async (
