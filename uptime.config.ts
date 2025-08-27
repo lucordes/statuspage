@@ -155,7 +155,7 @@ const workerConfig: WorkerConfig = {
       id: 'comments',
       name: 'Comments',
       method: 'GET',
-      target: 'https://comments.lucacordes.com/',
+      target: 'https://comments.lucacordes.com/web',
       tooltip: 'Powered by Remark42',
       hideLatencyChart: false,
       //checkProxy: 'worker://weur'
