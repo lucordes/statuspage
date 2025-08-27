@@ -14,7 +14,7 @@ const pageConfig: PageConfig = {
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
     '🌐 Public': ['launchpage', 'overleaf', 'notes','git'],
-    '🔐 Private': ['vscode','vps','vaultwarden','photos','analytics','webdav','budget'],
+    '🔐 Private': ['vscode','vps','vaultwarden','photos','analytics','webdav','budget','comments','caldav','calendar'],
   },
 }
 
@@ -63,7 +63,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'Writing all the documents!',
       statusPageLink: 'https://overleaf.lucacordes.com',
       hideLatencyChart: false,
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
     },
     {
       id: 'notes',
@@ -73,7 +73,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'Public part of my diary!',
       statusPageLink: 'https://notes.lucacordes.com',
       hideLatencyChart: false,
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
     },
     {
       id: 'analytics',
@@ -84,7 +84,7 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://analytics.lucacordes.com',
       hideLatencyChart: false,
       expectedCodes: [405],
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
     },
     {
       id: 'git',
@@ -94,7 +94,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'It is like github!',
       statusPageLink: 'https://git.lucacordes.com',
       hideLatencyChart: false,
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
     },
     {
       id: 'webdav',
@@ -104,7 +104,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'Cloud!',
       hideLatencyChart: false,
       expectedCodes: [401],
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
     },
     {
       id: 'photos',
@@ -113,7 +113,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://photos.lucacordes.com',
       tooltip: 'Photos!',
       hideLatencyChart: false,
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
     },
     {
       id: 'vscode',
@@ -122,7 +122,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://vscode.lucacordes.com/login',
       tooltip: 'It is a decent editor!',
       hideLatencyChart: false,
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
     },
     {
       id: 'vps',
@@ -131,7 +131,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://nginxstrato.lucacordes.com/',
       tooltip: 'My VPS!',
       hideLatencyChart: false,
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
     },
     {
       id: 'vaultwarden',
@@ -140,7 +140,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://vaultwarden.lucacordes.com',
       tooltip: 'My secure passwords!',
       hideLatencyChart: false,
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
     },
     {
       id: 'budget',
@@ -149,8 +149,36 @@ const workerConfig: WorkerConfig = {
       target: 'https://budget.lucacordes.com/',
       tooltip: 'My Money!',
       hideLatencyChart: false,
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
     },
+    {
+      id: 'comments',
+      name: 'Comments',
+      method: 'GET',
+      target: 'https://comments.lucacordes.com/',
+      tooltip: 'Powered by Remark42',
+      hideLatencyChart: false,
+      //checkProxy: 'worker://weur'
+    },
+    {
+      id: 'caldav',
+      name: 'CalDAV/CardDAV Server',
+      method: 'GET',
+      target: 'https://caldav.lucacordes.com/',
+      tooltip: 'My Calendar/Contacts',
+      hideLatencyChart: false,
+      //checkProxy: 'worker://weur'
+    },
+    {
+      id: 'calendar',
+      name: 'CalDAV Web Client',
+      method: 'GET',
+      target: 'https://calendar.lucacordes.com/',
+      tooltip: 'My Calendar Visualized',
+      hideLatencyChart: false,
+      //checkProxy: 'worker://weur'
+    },
+    
   ],
   notification: {
     // [Optional] apprise API server URL
