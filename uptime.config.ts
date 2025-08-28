@@ -35,7 +35,7 @@ const workerConfig: WorkerConfig = {
       tooltip: 'The root page of a domain is called Lauchpange!',
       statusPageLink: 'https://www.lucacordes.com',
       hideLatencyChart: false,
-      checkProxy: 'worker://weur'
+      //checkProxy: 'worker://weur'
       // [OPTIONAL] headers to be sent
       // headers: {
       //   'User-Agent': 'Uptimeflare',
