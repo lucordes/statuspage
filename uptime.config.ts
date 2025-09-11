@@ -182,8 +182,7 @@ const workerConfig: WorkerConfig = {
   ],
   notification: {
     
-apprise -vv -t "Server Problems" -b "Check the dashboard and figure it out" \
-   ntfy://csKa61RVWew5T3uk
+    recipientUrl: 'ntfy://csKa61RVWew5T3uk',
     // [Optional] apprise API server URL
     // if not specified, no notification will be sent
     //appriseApiServer: 'https://apprise.example.com/notify',
