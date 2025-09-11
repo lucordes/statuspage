@@ -181,7 +181,7 @@ const workerConfig: WorkerConfig = {
     
   ],
   notification: {
-    appriseApiServer: "https://apprise-det3ts0wr-lucordes-projects.vercel.app/notify",
+    appriseApiServer: "https://apprise.apps.merit.edu/notify/",
     recipientUrl: 'ntfy://csKa61RVWew5T3uk',
     // [Optional] apprise API server URL
     // if not specified, no notification will be sent
