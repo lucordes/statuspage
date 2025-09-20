@@ -99,7 +99,7 @@ const workerConfig: WorkerConfig = {
     {
       id: 'files',
       name: 'Files',
-      method: 'POST',
+      method: 'GET',
       target: 'https://files.lucacordes.com',
       tooltip: 'Cloud!',
       hideLatencyChart: false,
