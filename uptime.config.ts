@@ -14,7 +14,7 @@ const pageConfig: PageConfig = {
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
     '🌐 Public': ['launchpage', 'overleaf', 'notes','git'],
-    '🔐 Private': ['vscode','vps','vaultwarden','photos','analytics','webdav','budget','comments','caldav','calendar'],
+    '🔐 Private': ['vscode','vps','vaultwarden','photos','analytics','files','budget','comments','caldav','calendar'],
   },
 }
 
@@ -97,13 +97,13 @@ const workerConfig: WorkerConfig = {
       //checkProxy: 'worker://weur'
     },
     {
-      id: 'webdav',
-      name: 'webdav',
+      id: 'files',
+      name: 'Files',
       method: 'POST',
-      target: 'https://webdav.lucacordes.com',
+      target: 'https://files.lucacordes.com',
       tooltip: 'Cloud!',
       hideLatencyChart: false,
-      expectedCodes: [401],
+      
       //checkProxy: 'worker://weur'
     },
     {
