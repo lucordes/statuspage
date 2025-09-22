@@ -103,7 +103,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://files.lucacordes.com',
       tooltip: 'Cloud!',
       hideLatencyChart: false,
-      expectedCodes: [403],
+      expectedCodes: [200],
       //checkProxy: 'worker://weur'
     },
     {
